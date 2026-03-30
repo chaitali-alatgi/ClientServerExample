@@ -34,7 +34,7 @@ public class Server {
         new Server().start(port);
     }
 
-    private void start(int port) throws IOException {
+    void start(int port) throws IOException {
         try (var executor   = Executors.newVirtualThreadPerTaskExecutor();
              var serverSocket = new ServerSocket(port)) {
             while (!serverSocket.isClosed()) {
